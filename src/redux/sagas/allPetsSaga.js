@@ -4,6 +4,7 @@ import axios from 'axios';
 function* getAllPetsSaga(){
     try{
         const response = yield axios.get('/pets');
+        console.log('trying to get the pets saga')
         yield put({
             type: 'SET_PETS', payload: response.data
         })
