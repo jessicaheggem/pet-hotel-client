@@ -12,7 +12,7 @@ class AllPets extends Component {
     render() {
         return (
             <div >
-                
+                {JSON.stringify(this.props.reduxStore.allPetsReducer)}
             </div>
         );
     }
