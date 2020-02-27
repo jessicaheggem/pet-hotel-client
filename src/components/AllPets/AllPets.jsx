@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-import './App.css';
 import { connect } from 'react-redux';
 
 class AllPets extends Component {
-    
+
     componentDidMount(){
         this.props.dispatch({
             type: 'FETCH_PETS'
@@ -20,4 +19,8 @@ class AllPets extends Component {
 
 }
 
-export default AllPets;
+const mapStateToProps = (reduxStore) => ({
+    reduxStore
+})
+
+export default connect(mapStateToProps) (AllPets);
