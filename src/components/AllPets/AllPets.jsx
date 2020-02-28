@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PetForm from '../NewPetForm/NewPetForm'
 import Pet from '../Pet/Pet'
 
 class AllPets extends Component {
@@ -12,9 +13,8 @@ class AllPets extends Component {
 
     render() {
         return (
-            <div>
-                {JSON.stringify(this.props.reduxStore.allPetsReducer)}
-
+            <div >
+                <PetForm />
                 <table>
                     <thead>
                         <tr>
